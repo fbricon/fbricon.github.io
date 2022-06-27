@@ -21,12 +21,12 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Fred's corner # the main title
+title: "Fred's corner" # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the sub-title
+tagline: An elitist [Eclipse/VS Code] plugin author's blog # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+  An elitist [Eclipse/VS Code] plugin author's blog about Java, Eclipse, Maven, VS Code extensions and Language Servers.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://fbricon.github.io"
@@ -41,7 +41,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Fred Bricon
-  email: fbricon@gmail.com # change to your email address
+  # email: fbricon@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/fbricon # change to your twitter homepage
