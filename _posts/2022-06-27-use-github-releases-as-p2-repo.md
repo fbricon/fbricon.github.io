@@ -261,7 +261,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: marvinpinto/action-automatic-releases@latest
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          repo_token: {% raw %}"${{secrets.GITHUB_TOKEN}}"{% endraw %}
           automatic_release_tag: "latest"
           prerelease: true
           title: "Development Build"
