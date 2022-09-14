@@ -239,7 +239,13 @@ The following is a GitHub action (you can save as `.github/worflows/CI.yaml`) th
 ```yaml
 name: Build P2 Update Site
 
-on: [push, pull_request]
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+    tags:
+      - "*.*.*"
 
 jobs:
   build:
@@ -267,13 +273,24 @@ jobs:
           title: "Development Build"
           files: |
             my.p2.repo.dir/target/flat-repository/*
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            my.p2.repo.dir/target/flat-repository/*
 ```
 
 Any push to the `main` branch will trigger a new release, overwriting the previous `latest` tag. The update site will be available as:
 
 > https://github.com/your.org/your.repo/releases/download/latest/
 
-This is perfect for snapshot builds or continous deployment. You can also configure your release process for immutable specific versions, as long as you upload `my.p2.repo.dir/target/flat-repository/*`. An exercise left to the reader.
+This is perfect for snapshot builds or continous deployment.
+
+Additionally, actual releases will be performed every time you create/push a tag following the `*.*.*` format, in which case the update site will be reachable from:
+
+> https://github.com/your.org/your.repo/releases/download/`<tag>`/
 
 ## Conclusion
 GitHub Releases is actually a great way to release your Eclipse plugins as a p2 repository, all you have to do is ensure that repository is configured to serve files from a flat structure. JBang makes it super easy to script those changes.
