@@ -21,7 +21,7 @@ timezone: Europe/Paris
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: "Fred's corner" # the main title
+title: "Fred's safe space" # the main title
 
 tagline: A so-called "elitist" [Eclipse/VS Code] plugin author's blog # it will display as the sub-title
 
