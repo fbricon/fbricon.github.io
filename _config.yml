@@ -23,7 +23,7 @@ timezone: Europe/Paris
 
 title: "Fred's corner" # the main title
 
-tagline: An elitist [Eclipse/VS Code] plugin author's blog # it will display as the sub-title
+tagline: An so-called "elitist" [Eclipse/VS Code] plugin author's blog # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   An elitist [Eclipse/VS Code] plugin author's blog about Java, Eclipse, Maven, VS Code extensions and Language Servers.
